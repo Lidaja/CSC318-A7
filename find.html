@@ -113,198 +113,199 @@
 		<button id="findListButton" onclick="javascript:clickListView()">
             list view
         </button>
-		<div id="MapView" style="display:none;">
-                    <div id="map" class="map"></div>
-                    <script async defer
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrE1Rg5Nr33no2syuQ3m8zzLI9nsfJycs&callback=initMap">
-                    </script>
-                </div>
-                <div id="ListView" class="ListView"  >
+		<div id="MapView" >
+			<div id="map" class="map"></div>
+			<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrE1Rg5Nr33no2syuQ3m8zzLI9nsfJycs&callback=initMap">
+			</script>
+		</div>
+		<div id="ListView" class="ListView" style="display:none;" >
 
-                    <div id="myModal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h2 class="modal-title">Grenadir Cafe</h2>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="POPoptionsImage">
-                                    <img src="https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg" ></div>
-                                    <div class="POPpara"><p> Mack </p>
-                                    <p> Starts: '+start+' </p>
-                                    <p> Takes: '+duration+' </p></div>
-                                    <div class="POPpara"><p> 23 fff </p>
-                                    <p> TOORNTO </p>
-                                    <p> fef342 </p></div>
-                                    <div class="POPpara"><p> 1231231231 </p>
-                                    <p> Rating: 3/5 </p>
-                                    <p> 5 open groups</p></div>
-                                    <div class="POPpara"><br><br><br><br><br></div>
-
-
-                                </div>
-                                <div class="modal-header" >
-                                    <h2 class="modal-title">Details</h2>
-                                </div>
-                                <div>
-                                    <p>
-                                        The Grenadier Cafe, located centrally in High Park, has been operated by the Grenadier Group since the mid 80's. From the beginning, we've been serving both quality breakfast dishes and daring new ventures into lunch and dinner items with a Greek touch!
-                                    </p>
-                                </div>
-                                <div class="modal-header">
-                                    <h2 class="modal-title">Groups</h2>
-                                </div>
-								  <!-- Modal content-->
-								  <div class="modal-content">
-									<h3 class="modal-title">Make a New Group</h3>
-									<p id=textTitle>Name:</p><input type="text" class="form-control" id="textInput">
-									<p id=textTitle>Description:</p> <input type="text" class="form-control" id="textInput">
-									<button type="button" class="btn btn-success">Save</button>
-									<div class="modal-header">
-									  <h3 class="modal-title">Swim Team Group</h3>
-									</div>
-									<div class="modal-body">
-									  Description: <p style="display: inline-block" contentEditable>Let's go swimming boys!</p><br>
-									</div>
-									<div class="modal-footer">
-									  <h4 style="text-align:center;">Members</h4>
-									  <table style="width:100%" style="margin:auto;">
-										<tr>
-										  <th>Name</th>
-										  <th>Status</th>
-										</tr>
-										<tr>
-										  <td>Liam</td>
-										  <td>Joined</td>
-										</tr>
-										<tr>
-										  <td>Mack</td>
-										  <td><button class="glyphicon glyphicon-thumbs-up"></button><button class="glyphicon glyphicon-remove"></button></td>
-										</tr>
-									  </table>
-									</div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <script>
-                        makeListView('Grenadir Cafe',
-                        'Anytime',
-                        '1 hour',
-                        '200 Parkside Dr,',
-                        'Toronto, ON,',
-                        'M6R 2Z3',
-                        '(416) 769-9870 ',
-                        '3',
-                        '5',
-                        'https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg')
-                        makeListView('Grenadir Cafe',
-                        'Anytime',
-                        '1 hour',
-                        '200 Parkside Dr,',
-                        'Toronto, ON,',
-                        'M6R 2Z3',
-                        '(416) 769-9870 ',
-                        '3',
-                        '5',
-                        'https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg')
-                        makeListView('Grenadir Cafe',
-                        'Anytime',
-                        '1 hour',
-                        '200 Parkside Dr,',
-                        'Toronto, ON,',
-                        'M6R 2Z3',
-                        '(416) 769-9870 ',
-                        '3',
-                        '5',
-                        'https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg')
-                    </script>
-                </div>
-			<button style="position:absolute; bottom:10%; left: 48.5%;" data-target="#filterModel" data-toggle="modal">Filter</button>
-			<div id="filterModel" class="modal fade" role="dialog">
+			<div id="myModal" class="modal fade" role="dialog">
 				<div class="modal-dialog">
 
 					<!-- Modal content-->
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h2 class="modal-title">Filter Search</h2>
-                        </div>
-                        <div class="modal-body">
-							<p id=textTitle>Keyword:</p><input type="text" class="form-control" id="textInput">
-							<p id=textTitle>Distance(km):</p><input type="number" class="form-control" id="textInput">
-							<p id=textTitle>Start Time:</p>
-							  <div class="form-inline">
-								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
-								  <option>1</option>
-								  <option>2</option>
-								  <option>3</option>
-								  <option>4</option>
-								  <option>5</option>
-								  <option>6</option>
-								  <option>7</option>
-								  <option>8</option>
-								  <option>9</option>
-								  <option>10</option>
-								  <option>11</option>
-								  <option>12</option>
-								</select>
-								<p style=display:inline-block;>:</p>
-								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
-								  <option>00</option>
-								  <option>10</option>
-								  <option>20</option>
-								  <option>30</option>
-								  <option>40</option>
-								  <option>50</option>
-								</select>
-								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
-								  <option>AM</option>
-								  <option>PM</option>
-								</select>
-							  </div>
-							  <p id=textTitle>Max Duration:</p>
-							  <div class="form-inline">
-								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
-								  <option>1</option>
-								  <option>2</option>
-								  <option>3</option>
-								  <option>4</option>
-								  <option>5</option>
-								  <option>6</option>
-								  <option>7</option>
-								  <option>8</option>
-								  <option>9</option>
-								  <option>10</option>
-								  <option>11</option>
-								  <option>12</option>
-								</select>
-								<p style=display:inline-block;>:</p>
-								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
-								  <option>00</option>
-								  <option>10</option>
-								  <option>20</option>
-								  <option>30</option>
-								  <option>40</option>
-								  <option>50</option>
-								</select>
-							  </div>
+							<h2 class="modal-title">Grenadir Cafe</h2>
 						</div>
+						<div class="modal-body">
+							<div class="POPoptionsImage">
+							<img src="https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg" ></div>
+							<div class="POPpara"><p> Mack </p>
+							<p> Starts: '+start+' </p>
+							<p> Takes: '+duration+' </p></div>
+							<div class="POPpara"><p> 23 fff </p>
+							<p> TOORNTO </p>
+							<p> fef342 </p></div>
+							<div class="POPpara"><p> 1231231231 </p>
+							<p> Rating: 3/5 </p>
+							<p> 5 open groups</p></div>
+							<div class="POPpara"><br><br><br><br><br></div>
+
+
+						</div>
+						<div class="modal-header" >
+							<h2 class="modal-title">Details</h2>
+						</div>
+						<div>
+							<p>
+								The Grenadier Cafe, located centrally in High Park, has been operated by the Grenadier Group since the mid 80's. From the beginning, we've been serving both quality breakfast dishes and daring new ventures into lunch and dinner items with a Greek touch!
+							</p>
+						</div>
+						<div class="modal-header">
+							<h2 class="modal-title">Groups</h2>
+						</div>
+						  <!-- Modal content-->
+						  <div class="modal-content">
+							<h3 class="modal-title">Make a New Group</h3>
+							<p id=textTitle>Name:</p><input type="text" class="form-control" id="textInput">
+							<p id=textTitle>Description:</p> <input type="text" class="form-control" id="textInput">
+							<button type="button" class="btn btn-success">Save</button>
+							<div class="modal-header">
+							  <h3 class="modal-title">Swim Team Group</h3>
+							</div>
+							<div class="modal-body">
+							  Description: <p style="display: inline-block" contentEditable>Let's go swimming boys!</p><br>
+							</div>
+							<div class="modal-footer">
+							  <h4 style="text-align:center;">Members</h4>
+							  <table style="width:100%" style="margin:auto;">
+								<tr>
+								  <th>Name</th>
+								  <th>Status</th>
+								</tr>
+								<tr>
+								  <td>Liam</td>
+								  <td>Joined</td>
+								</tr>
+								<tr>
+								  <td>Mack</td>
+								  <td><button class="glyphicon glyphicon-thumbs-up"></button><button class="glyphicon glyphicon-remove"></button></td>
+								</tr>
+							  </table>
+							</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
+
 					</div>
 				</div>
 			</div>
-		  
+
+			<script>
+				makeListView('Grenadir Cafe',
+				'Anytime',
+				'1 hour',
+				'200 Parkside Dr,',
+				'Toronto, ON,',
+				'M6R 2Z3',
+				'(416) 769-9870 ',
+				'3',
+				'5',
+				'https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg')
+				makeListView('Grenadir Cafe',
+				'Anytime',
+				'1 hour',
+				'200 Parkside Dr,',
+				'Toronto, ON,',
+				'M6R 2Z3',
+				'(416) 769-9870 ',
+				'3',
+				'5',
+				'https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg')
+				makeListView('Grenadir Cafe',
+				'Anytime',
+				'1 hour',
+				'200 Parkside Dr,',
+				'Toronto, ON,',
+				'M6R 2Z3',
+				'(416) 769-9870 ',
+				'3',
+				'5',
+				'https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg')
+			</script>
+		</div>
+	
 	</div>
+	<button style="position:absolute; bottom:10%; left: 48.5%;" data-target="#filterModel" data-toggle="modal">Filter</button>
+	<div id="filterModel" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h2 class="modal-title">Filter Search</h2>
+				</div>
+				<div class="modal-body">
+					<p id=textTitle>Keyword:</p><input type="text" class="form-control" id="textInput">
+					<p id=textTitle>Distance(km):</p><input type="number" class="form-control" id="textInput">
+					<p id=textTitle>Start Time:</p>
+					  <div class="form-inline">
+						<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						  <option>6</option>
+						  <option>7</option>
+						  <option>8</option>
+						  <option>9</option>
+						  <option>10</option>
+						  <option>11</option>
+						  <option>12</option>
+						</select>
+						<p style=display:inline-block;>:</p>
+						<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+						  <option>00</option>
+						  <option>10</option>
+						  <option>20</option>
+						  <option>30</option>
+						  <option>40</option>
+						  <option>50</option>
+						</select>
+						<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+						  <option>AM</option>
+						  <option>PM</option>
+						</select>
+					  </div>
+					  <p id=textTitle>Max Duration:</p>
+					  <div class="form-inline">
+						<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						  <option>6</option>
+						  <option>7</option>
+						  <option>8</option>
+						  <option>9</option>
+						  <option>10</option>
+						  <option>11</option>
+						  <option>12</option>
+						</select>
+						<p style=display:inline-block;>:</p>
+						<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+						  <option>00</option>
+						  <option>10</option>
+						  <option>20</option>
+						  <option>30</option>
+						  <option>40</option>
+						  <option>50</option>
+						</select>
+					  </div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		  
 	<div id="bcorners">
 		<a href="main.html"><button id="homeButton"></button></a>
 	</div>

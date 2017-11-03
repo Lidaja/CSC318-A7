@@ -5,6 +5,12 @@ function initMap() {
     var humber = { lat: 43.649211, lng: -79.485165 };
     var runny = { lat: 43.651198, lng: -79.476199 };
     var highPark = { lat: 43.653609, lng: -79.465254 };
+	var image = {
+		url: "https://d30y9cdsu7xlg0.cloudfront.net/png/8205-200.png",
+		scaledSize: new google.maps.Size(50, 50),
+		origin: new google.maps.Point(0,0), 
+		anchor: new google.maps.Point(20, 50) 
+	}
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         center: runny
@@ -20,6 +26,11 @@ function initMap() {
     var marker3 = new google.maps.Marker({
         position: highPark,
         map: map
+    });
+	var self = new google.maps.Marker({
+        position: runny,
+        map: map,
+		icon: image
     });
 }
 
