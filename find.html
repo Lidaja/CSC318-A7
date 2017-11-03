@@ -108,11 +108,11 @@
 	<div id="tcorners"></div>
 	<div id="main">
 		<button id="findListButton" onclick="javascript:clickMapView()">
-                        Map View
+            Map View
 		</button>
 		<button id="findListButton" onclick="javascript:clickListView()">
-                    list view
-                </button>
+            list view
+        </button>
 		<div id="MapView" style="display:none;">
                     <div id="map" class="map"></div>
                     <script async defer
@@ -227,7 +227,83 @@
                         'https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg')
                     </script>
                 </div>
-          <button style="position:absolute; bottom:10%; left: 48.5%;">Filter</button>
+			<button style="position:absolute; bottom:10%; left: 48.5%;" data-target="#filterModel" data-toggle="modal">Filter</button>
+			<div id="filterModel" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">Filter Search</h2>
+                        </div>
+                        <div class="modal-body">
+							<p id=textTitle>Keyword:</p><input type="text" class="form-control" id="textInput">
+							<p id=textTitle>Distance(km):</p><input type="number" class="form-control" id="textInput">
+							<p id=textTitle>Start Time:</p>
+							  <div class="form-inline">
+								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+								  <option>1</option>
+								  <option>2</option>
+								  <option>3</option>
+								  <option>4</option>
+								  <option>5</option>
+								  <option>6</option>
+								  <option>7</option>
+								  <option>8</option>
+								  <option>9</option>
+								  <option>10</option>
+								  <option>11</option>
+								  <option>12</option>
+								</select>
+								<p style=display:inline-block;>:</p>
+								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+								  <option>00</option>
+								  <option>10</option>
+								  <option>20</option>
+								  <option>30</option>
+								  <option>40</option>
+								  <option>50</option>
+								</select>
+								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+								  <option>AM</option>
+								  <option>PM</option>
+								</select>
+							  </div>
+							  <p id=textTitle>Max Duration:</p>
+							  <div class="form-inline">
+								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+								  <option>1</option>
+								  <option>2</option>
+								  <option>3</option>
+								  <option>4</option>
+								  <option>5</option>
+								  <option>6</option>
+								  <option>7</option>
+								  <option>8</option>
+								  <option>9</option>
+								  <option>10</option>
+								  <option>11</option>
+								  <option>12</option>
+								</select>
+								<p style=display:inline-block;>:</p>
+								<select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
+								  <option>00</option>
+								  <option>10</option>
+								  <option>20</option>
+								  <option>30</option>
+								  <option>40</option>
+								  <option>50</option>
+								</select>
+							  </div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		  
 	</div>
 	<div id="bcorners">
 		<a href="main.html"><button id="homeButton"></button></a>
