@@ -102,6 +102,21 @@
         display: inline-block;
         float: left;
     }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
   </style>
 </head>
 <body>
@@ -182,8 +197,9 @@
 								</tr>
 								<tr>
 								  <td>Mack</td>
-								  <td><button class="glyphicon glyphicon-thumbs-up"></button><button class="glyphicon glyphicon-remove"></button></td>
+								  <td>Requested</td>
 								</tr>
+                <button>Request To join</button>
 							  </table>
 							</div>
 						<div class="modal-footer">
@@ -227,7 +243,7 @@
 				'https://tayloronhistory.files.wordpress.com/2012/10/dscn9216.jpg')
 			</script>
 		</div>
-	
+
 	</div>
 	<button style="position:absolute; bottom:10%; left: 48.5%;" data-target="#filterModel" data-toggle="modal">Filter</button>
 	<div id="filterModel" class="modal fade" role="dialog">
@@ -305,7 +321,7 @@
 			</div>
 		</div>
 	</div>
-		  
+
 	<div id="bcorners">
 		<a href="main.html"><button id="homeButton"></button></a>
 	</div>
