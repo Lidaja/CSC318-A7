@@ -60,10 +60,9 @@
     .optionsImage{
         position: relative;
         display: inline-block;
-	width: 15%;
-	height: 100%;
+		width: 16%;
+		height: 100%;
         float: left;
-        right:20px;
 
 
     }
@@ -82,7 +81,7 @@
         display: inline-block;
         right:10px;
 
-	width: 100%;
+		width: 100%;
 
 
     }
@@ -156,8 +155,35 @@
                                 <div class="modal-header">
                                     <h2 class="modal-title">Groups</h2>
                                 </div>
-                                <div>
-                                </div>
+								  <!-- Modal content-->
+								  <div class="modal-content">
+									<h3 class="modal-title">Make a New Group</h3>
+									<p id=textTitle>Name:</p><input type="text" class="form-control" id="textInput">
+									<p id=textTitle>Description:</p> <input type="text" class="form-control" id="textInput">
+									<button type="button" class="btn btn-success">Save</button>
+									<div class="modal-header">
+									  <h3 class="modal-title">Swim Team Group</h3>
+									</div>
+									<div class="modal-body">
+									  Description: <p style="display: inline-block" contentEditable>Let's go swimming boys!</p><br>
+									</div>
+									<div class="modal-footer">
+									  <h4 style="text-align:center;">Members</h4>
+									  <table style="width:100%" style="margin:auto;">
+										<tr>
+										  <th>Name</th>
+										  <th>Status</th>
+										</tr>
+										<tr>
+										  <td>Liam</td>
+										  <td>Joined</td>
+										</tr>
+										<tr>
+										  <td>Mack</td>
+										  <td><button class="glyphicon glyphicon-thumbs-up"></button><button class="glyphicon glyphicon-remove"></button></td>
+										</tr>
+									  </table>
+									</div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
