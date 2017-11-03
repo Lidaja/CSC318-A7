@@ -85,6 +85,21 @@
   width: 49%;
   height: 10%;
     }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
 
   </style>
 </head>
@@ -97,32 +112,70 @@
     <button id="myButton" onclick="javascript:clickMyGroups()">
       My Groups
     </button>
-    <div id="ActivityView">
+    <div id="Activity">
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
-
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Pool Party</h4>
+              <h2 class="modal-title">Pool Party</h2>
             </div>
             <div class="modal-body">
-              <p>Click on any field to edit it!</p>
+              <h4>Click on any field to edit it!</h4>
               Name: <p style="display: inline-block" contentEditable>Liam</p><br>
-              Description: <p style="display: inline-block" contentEditable>Come swim, get drunk, and get more drunk</p>
+              Description: <p style="display: inline-block" contentEditable>Come swim, get drunk, and get more drunk</p><br>
+              Location: <p style="display: inline-block" contentEditable>40 St. George Road</p><br>
+              Starts: <p style="display: inline-block" contentEditable>10:00 AM</p><br>
+              Duration: <p style="display: inline-block" contentEditable>3 Hours</p><br>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
             </div>
           </div>
 
         </div>
       </div>
       <br>
-      <button type="button" style= "width:100%; height: 100px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Day at the spa</button>
-      <br><br>
       <button type="button" style= "width:100%; height: 100px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Pool Party</button>
+    </div>
+    <div id="Group" style="display: None;">
+      <div class="modal fade" id="myModalGroup" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title">Swim Team Group</h2>
+            </div>
+            <div class="modal-body">
+              <h4>Click on any field to edit it!</h4>
+              Description: <p style="display: inline-block" contentEditable>Let's go swimming boys!</p><br>
+            </div>
+            <div class="modal-footer">
+              <h2 style="text-align:center;">Members</h2>
+              <table style="width:100%" style="margin:auto;">
+                <tr>
+                  <th>Name</th>
+                  <th>Status</th>
+                </tr>
+                <tr>
+                  <td>Liam</td>
+                  <td>Joined</td>
+                </tr>
+                <tr>
+                  <td>Mack</td>
+                  <td><button class="glyphicon glyphicon-thumbs-up"></button><button class="glyphicon glyphicon-remove"></button></td>
+                </tr>
+              </table>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <br>
+      <button type="button" style= "width:100%; height: 100px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalGroup">Swim Team Group</button>
     </div>
   </div>
 	<div id="bcorners">
