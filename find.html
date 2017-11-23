@@ -27,7 +27,15 @@
 		margin: auto;
 		text-align: center;
 		position:absolute;
-		bottom:0%
+		top:865px
+    }
+    .filter {
+		width: 550px;
+		height: 80px;
+		position:absolute; 
+		top:795px;
+		margin: auto;
+		
     }
     #main {
 		width: 550px;
@@ -44,13 +52,25 @@
 		display: inline-block;
 		width: 49%;
 		height: 10%;
+		border-style: solid;
+                border-bottom: thick solid #008000;
     }
-    #desplayOptionsButton {
-        position: relative;
+    #findMapButton {
+		display: inline-block;
+		width: 49%;
+		height: 10%;
+		border-style: solid;
+                border-bottom: thin solid #008000;
+    }
+
+    .displayOptionsButton {
+                position: relative;
 		display: inline-block;
 		width: 100%;
 		height: 80px;
+		
     }
+    
     #map {
         height: 720px;
         width: 100%;
@@ -122,12 +142,13 @@
 <body>
 	<div id="tcorners"></div>
 	<div id="main">
-		<button id="findListButton" onclick="javascript:clickMapView()">
-            Map View
+                <button id="findListButton" onclick="javascript:clickListView()">
+                    List View
+                </button>
+		<button id="findMapButton" onclick="javascript:clickMapView()">
+                    Map View
 		</button>
-		<button id="findListButton" onclick="javascript:clickListView()">
-            list view
-        </button>
+		
 		<div id="MapView" >
 			<div id="map" class="map"></div>
 			<script async defer
@@ -245,7 +266,7 @@
 		</div>
 
 	</div>
-	<button style="position:absolute; bottom:10%; left: 48.5%;" data-target="#filterModel" data-toggle="modal">Filter</button>
+	<button class="filter" data-target="#filterModel" data-toggle="modal">Filter</button>
 	<div id="filterModel" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 
@@ -325,6 +346,8 @@
 	<div id="bcorners">
 		<a href="main.html"><button id="homeButton"></button></a>
 	</div>
-
+	<script>
+	document.getElementById("findListButton").onclick();
+        </script>
 </body>
 </html>

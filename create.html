@@ -35,10 +35,19 @@
 	width: 10%;
 	height: 50%;
     }
-    #createListButton {
-  display: inline-block;
-  width: 49%;
-  height: 10%;
+    #actButton {
+        display: inline-block;
+        width: 49%;
+        height: 10%;
+        border-style: solid;
+                border-bottom: thick solid  #0044cc;
+    }
+    #groupButton {
+        display: inline-block;
+        width: 49%;
+        height: 10%;
+        border-style: solid;
+                border-bottom: thin solid  #0044cc;
     }
     #textInput {
       width: 80%;
@@ -55,10 +64,10 @@
 <body>
 	<div id="tcorners"></div>
 	<div id="main" style="text-align:center;">
-    <button id="createListButton" onclick="javascript:clickActivity()">
+    <button id="actButton" onclick="javascript:clickActivity()">
       Activity
 		</button>
-		<button id="createListButton" onclick="javascript:clickGroup()">
+		<button id="groupButton" onclick="javascript:clickGroup()">
       Group
     </button>
     <div id="Activity">
@@ -126,11 +135,11 @@
       <label class="radio-inline"><input type="radio" name="optradio">Weekly</label>
       <label class="radio-inline"><input type="radio" name="optradio">Monthly</label>
       <br><br>
-      <a href="main.html"><button type="button" class="btn btn-success">Create Activity</button></a>
+      <a href="main.html"><button type="button" class="btn btn-primary">Create Activity</button></a>
     </div>
     <div id="Group" style="display: None;">
       <br><br><br><br><br><br>
-      <a href="find.html"><button type="button" style="width: 50%; height: 400px" class="btn btn-success">Find activity to attach group to!</button></a>
+      <a href="find.html"><button type="button" style="width: 50%; height: 400px" class="btn btn-primary">Find activity to attach group to!</button></a>
     </div>
 	</div>
 	<div id="bcorners">

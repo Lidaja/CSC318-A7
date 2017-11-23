@@ -32,10 +32,12 @@ function initMap() {
         map: map,
 		icon: image
     });
+        
+            
 }
 
 function makeListView(name, start, duration, addr,city, post,num,rate,groups,image){
-    view = '<button id="desplayOptionsButton" '+ 
+    view = '<button class="displayOptionsButton" '+ 
         'data-toggle="modal" data-target="#myModal"> '+
                         '<div class="optionsImage">' +
                         '<img src="'+image+'" ></div>'+
@@ -58,7 +60,10 @@ function clickMapView() {
         if (mp.style.display == 'none') {
             lst.style.display = 'none';
             mp.style.display = 'block';
+            document.getElementById("findMapButton").style.borderBottomWidth = 'thick';
+            document.getElementById("findListButton").style.borderBottomWidth = 'thin';
         }
+        initMap();
 }
 function clickListView() {
     var mp = document.getElementById("MapView");
@@ -66,5 +71,7 @@ function clickListView() {
     if (lst.style.display == 'none') {
         mp.style.display = 'none';
         lst.style.display = 'block';
+        document.getElementById("findMapButton").style.borderBottomWidth = 'thin';
+        document.getElementById("findListButton").style.borderBottomWidth = 'thick';
     }
 }

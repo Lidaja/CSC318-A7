@@ -81,10 +81,19 @@
         display: inline-block;
         float: left;
     }
-    #myButton {
-  display: inline-block;
-  width: 49%;
-  height: 10%;
+    #actButton {
+        display: inline-block;
+        width: 49%;
+        height: 10%;
+        border-style: solid;
+                border-bottom: thick solid #ff8c1a;
+    }
+    #groupButton {
+        display: inline-block;
+        width: 49%;
+        height: 10%;
+        border-style: solid;
+                border-bottom: thin solid #ff8c1a;
     }
     table {
         font-family: arial, sans-serif;
@@ -107,10 +116,10 @@
 <body>
 	<div id="tcorners"></div>
 	<div id="main" style="text-align: center;">
-    <button id="myButton" onclick="javascript:clickMyActivities()">
+    <button id="actButton" onclick="javascript:clickMyActivities()">
       My Activities
     </button>
-    <button id="myButton" onclick="javascript:clickMyGroups()">
+    <button id="groupButton" onclick="javascript:clickMyGroups()">
       My Groups
     </button>
     <div id="Activity">
@@ -138,7 +147,7 @@
         </div>
       </div>
       <br>
-      <button type="button" style= "width:100%; height: 100px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Pool Party</button>
+      <button type="button" style= "width:100%; height: 100px;" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">Pool Party</button>
     </div>
     <div id="Group" style="display: None;">
       <div class="modal fade" id="myModalGroup" role="dialog">
@@ -176,7 +185,7 @@
         </div>
       </div>
       <br>
-      <button type="button" style= "width:100%; height: 100px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalGroup">Swim Team Group</button>
+      <button type="button" style= "width:100%; height: 100px;" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModalGroup">Swim Team Group</button>
     </div>
   </div>
 	<div id="bcorners">
