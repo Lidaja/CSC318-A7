@@ -32,11 +32,11 @@
     .filter {
 		width: 550px;
 		height: 80px;
-		position:absolute; 
+		position:absolute;
 		top:795px;
 		margin: auto;
 		font-size: 200%;
-		
+
     }
     #main {
 		width: 550px;
@@ -48,10 +48,17 @@
 		width: 10%;
 		height: 50%;
     }
-
+    #backButton {
+        display: inline-block;
+        width: 10%;
+        height: 10%;
+        border-style: solid;
+                border-bottom: thin solid #008000;
+                font-size: 200%;
+    }
     #findListButton {
 		display: inline-block;
-		width: 49%;
+		width: 40%;
 		height: 10%;
 		border-style: solid;
                 border-bottom: thick solid #008000;
@@ -59,7 +66,7 @@
     }
     #findMapButton {
 		display: inline-block;
-		width: 49%;
+		width: 40%;
 		height: 10%;
 		border-style: solid;
                 border-bottom: thin solid #008000;
@@ -71,9 +78,9 @@
 		display: inline-block;
 		width: 100%;
 		height: 80px;
-		
+
     }
-    
+
     #map {
         height: 720px;
         width: 100%;
@@ -145,13 +152,16 @@
 <body>
 	<div id="tcorners"></div>
 	<div id="main">
+    <a href="main.html"><button id="backButton">
+      <p>&#8630;</p>
+    </button></a>
                 <button id="findListButton" onclick="javascript:clickListView()">
                     List View
                 </button>
 		<button id="findMapButton" onclick="javascript:clickMapView()">
                     Map View
 		</button>
-		
+
 		<div id="MapView" >
 			<div id="map" class="map"></div>
 			<script async defer
@@ -185,50 +195,74 @@
 
 
 						</div>
-						<div class="modal-header" >
-							<h2 class="modal-title">Details</h2>
-						</div>
-						<div>
-							<p>
-								The Grenadier Cafe, located centrally in High Park, has been operated by the Grenadier Group since the mid 80's. From the beginning, we've been serving both quality breakfast dishes and daring new ventures into lunch and dinner items with a Greek touch!
-							</p>
-						</div>
-						<div class="modal-header">
-							<h2 class="modal-title">Groups</h2>
-						</div>
-						  <!-- Modal content-->
-						  <div class="modal-content">
-							<h3 class="modal-title">Make a New Group</h3>
-							<p id=textTitle>Name:</p><input type="text" class="form-control" id="textInput">
-							<p id=textTitle>Description:</p> <input type="text" class="form-control" id="textInput">
-							<button type="button" class="btn btn-success">Save</button>
-							<div class="modal-header">
-							  <h3 class="modal-title">Swim Team Group</h3>
-							</div>
-							<div class="modal-body">
-							  Description: <p style="display: inline-block" contentEditable>Let's go swimming boys!</p><br>
-							</div>
-							<div class="modal-footer">
-							  <h4 style="text-align:center;">Members</h4>
-							  <table style="width:100%" style="margin:auto;">
-								<tr>
-								  <th>Name</th>
-								  <th>Status</th>
-								</tr>
-								<tr>
-								  <td>Liam</td>
-								  <td>Joined</td>
-								</tr>
-								<tr>
-								  <td>Mack</td>
-								  <td>Requested</td>
-								</tr>
-                <button>Request To join</button>
-							  </table>
-							</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
+            <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+          <div class="modal-header" >
+            <h2 class="modal-title">Details</h2>
+          </div></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+          <p>
+      		The Grenadier Cafe, located centrally in High Park, has been operated by the Grenadier Group since the mid 80's. From the beginning, we've been serving both quality breakfast dishes and daring new ventures into lunch and dinner items with a Greek touch!
+      		</p>
+      </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <div class="modal-header" ><h2 class="modal-title">Make a New Group</h2></div></a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+      		<p id=textTitle>Name:</p><input type="text" class="form-control" id="textInput">
+      		<p id=textTitle>Description:</p> <input type="text" class="form-control" id="textInput">
+      		<a href = "find.html"> <button type="button" onclick='alert("Group created!")' class="btn btn-success">Save</button></a>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+          <div class="modal-header">
+            <h2 class="modal-title">Existing Groups</h2>
+          </div></a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body"><div class="modal-header">
+        <h3 class="modal-title">Swim Team Group</h3>
+      </div>
+      <div class="modal-body">
+        Description: <p style="display: inline-block" contentEditable>Let's go swimming boys!</p><br>
+      </div>
+      <div class="modal-footer">
+        <h4 style="text-align:center;">Members</h4>
+        <table style="width:100%" style="margin:auto;">
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Liam</td>
+          <td>Joined</td>
+        </tr>
+        <tr>
+          <td>Mack</td>
+          <td>Requested</td>
+        </tr>
+        <button>Request To join</button>
+        </table>
+      </div></div>
+    </div>
+  </div>
+</div>
 
 					</div>
 				</div>

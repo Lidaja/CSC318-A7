@@ -37,7 +37,7 @@
     }
     #actButton {
         display: inline-block;
-        width: 49%;
+        width: 40%;
         height: 10%;
         border-style: solid;
                 border-bottom: thick solid  #0044cc;
@@ -45,7 +45,15 @@
     }
     #groupButton {
         display: inline-block;
-        width: 49%;
+        width: 40%;
+        height: 10%;
+        border-style: solid;
+                border-bottom: thin solid  #0044cc;
+                font-size: 200%;
+    }
+    #backButton {
+        display: inline-block;
+        width: 10%;
         height: 10%;
         border-style: solid;
                 border-bottom: thin solid  #0044cc;
@@ -66,12 +74,15 @@
 <body>
 	<div id="tcorners"></div>
 	<div id="main" style="text-align:center;">
+    <a href="main.html"><button id="backButton">
+      <p>&#8630;</p>
+    </button></a>
     <button id="actButton" onclick="javascript:clickActivity()">
       Create Activity
 		</button>
-		<button id="groupButton" onclick="javascript:clickGroup()">
+		<a href="find.html"><button id="groupButton" onclick='alert("Please select which activity you want to attach a group to")'>
       Create Group
-    </button>
+    </button></a>
     <div id="Activity">
       <p id=textTitle>Name:</p><input type="text" class="form-control" id="textInput">
       <p id=textTitle>Description:</p> <input type="text" class="form-control" id="textInput">
@@ -108,6 +119,7 @@
       </div>
       <p id=textTitle>Duration:</p>
       <div class="form-inline">
+      </select><p style=display:inline-block;>Hrs:</p>
         <select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
           <option>1</option>
           <option>2</option>
@@ -122,7 +134,7 @@
           <option>11</option>
           <option>12</option>
         </select>
-        <p style=display:inline-block;>:</p>
+        <p style=display:inline-block;>Mins:</p>
         <select style="width: 20%; display:inline-blockl" class="form-control" id="sel1">
           <option>00</option>
           <option>10</option>
@@ -137,7 +149,7 @@
       <label class="radio-inline"><input type="radio" name="optradio">Weekly</label>
       <label class="radio-inline"><input type="radio" name="optradio">Monthly</label>
       <br><br>
-      <a href="main.html"><button type="button" class="btn btn-primary">Create Activity</button></a>
+      <a href="main.html"><button type="button" onclick = 'alert("Activity created!")' class="btn btn-primary">Create Activity</button></a>
     </div>
     <div id="Group" style="display: None;">
       <br><br><br><br><br><br>
